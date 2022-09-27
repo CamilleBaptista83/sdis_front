@@ -1,46 +1,30 @@
-# Getting Started with Create React App
+PROJECT REACT REDUX TS SCSS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Pour React
 
-## Available Scripts
+npm start
+npm run build
 
-In the project directory, you can run:
+## Pour le SCSS
 
-### `npm start`
+Le fichier variables est dans /src/style/variables
+Il faut mettre dans ce fichiers les différentes choses redondantes dans le projet, comme les couleurs
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Pour le redux
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Tout est dans le dossier REDUX /src/redux
 
-### `npm test`
+-   actions : toutes les actions ainsi que le fichier actionsTypes qui sert à lister toutes les actions et éviter les erreurs de copier/coller
+-   Interfaces : toutes les interfaces TS
+-   reducers : tous les reducers ainsi que l'index à remplir à chaque fois qu'on rajoute un reducer
+-   index.js : fichier ou l'on ajoute tous les actions pour les incorporer dans le store après
+-   store.js : le store qui est dans le index.tsx
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Les Services
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+-   Interceptor :
+    C'est le custom interceptor qui est là pour gérer le refresh token sans avoir besoin de se relogger
+-   Traduction :
+    Dossier dans lequel il faut mettre les différent json de traduction
+-   LiensInternes.js : Tous les liens url du router
+-   RoutesApi.js toutes les routes externe du webservice

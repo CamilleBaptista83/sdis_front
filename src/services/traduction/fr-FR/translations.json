@@ -1,0 +1,265 @@
+{
+	"HOME": {
+		"titre": "LE RESEAU DES PROFESSIONNELS DE L'IT",
+		"sous_titre": "Pour gérer tous vos besoins en experts & missions",
+		"box_01_titre": "ESN",
+		"box_01_paragraphe": "Répondez rapidement aux besoins de missions de vos clients. Placez vos inter-contrats",
+		"box_02_titre": "Freelance",
+		"box_02_paragraphe": "Trouvez rapidement votre mission",
+		"box_03_titre": "Client",
+		"box_03_paragraphe": "Trouvez rapidement votre profil",
+		"middle_row_one": {
+			"title_01": "Générez de nouveaux projets",
+			"title_02": "Obtenez des Consultants dédiés",
+			"title_03": "Rencontrez des Membres certifiés"
+		},
+		"middle_row_two": {
+			"title_01": "OPTIMISEZ VOS COÛTS",
+			"title_02": "GÉREZ TOUS VOS BESOINS DE MISSIONS",
+			"title_03": "OBTENEZ UNE VISIBILITÉ TOTALE"
+		},
+		"middle_row_three": {
+			"title_01": "Obtenez des réponses ciblées et objectives",
+			"title_02": "Accédez gratuitement à la plateforme",
+			"title_03": "Faites fructifier votre réseau"
+		},
+		"section_trois": {
+			"gauche": "Rejoignez la plus grande plateforme du Sud pour répondre à tous vos besoins de missions et enrichir votre réseau",
+			"droite": "MARKET PLACE <br/> PORTAGE COMMERCIAL "
+		}
+	},
+	"DASHBOARD": {
+		"title": "Bienvenue sur votre Dashboard",
+    "no_matching" : "Nous vous invitons à remplir les informations liées à <a class='no-matching-lien' href='/mes-services/mes-missions'> vos missions </a> et <a class='no-matching-lien' href='/mes-services/mes-profils'> vos profils </a> afin d'obtenir des réponses pertinentes.",
+    "info_perso" : "Nous vous invitons à remplir l'onglet <a class='no-matching-lien' href='/mon-compte/mes-alertes'> vos informations personnelles </a>",
+    "societe" : "Nous vous invitons à remplir l'onglet <a class='no-matching-lien' href='/mon-compte/ma-societe'> ma fiche société </a>"
+	},
+	"ALERTES_NOM_CHAMPS": {
+		"metier": "Métiers",
+		"language": "Langages informatiques",
+		"cms": "Framework / CMS",
+		"methode": "Méthodes",
+		"outil": "Outils",
+		"bdd": "BDD"
+	},
+	"NOTIFICATIONS": {
+		"notif_01": "Recevoir mes messages par mail",
+		"notif_02": "Recevoir des matchs sur mes besoins récurrents par mail",
+		"notif_03": "Recevoir mes alertes spécifiques par mail"
+	},
+	"FOOTER": {
+		"colonne_01": {
+			"titre": "Reel IT Community",
+			"nom_01": "Qui sommes-nous ?",
+			"lien_01": "#",
+			"nom_02": "Reel It Group",
+			"lien_02": "#",
+			"nom_03": "Nos Prestations",
+			"lien_03": "#",
+			"nom_04": "Nos Valeurs",
+			"lien_04": "#",
+			"nom_05": "Nos Partenaires",
+			"lien_05": "#"
+		},
+		"colonne_02": {
+			"titre": "Reel IT",
+			"nom_01": "Le groupe",
+			"lien_01": "#",
+			"nom_02": "Contact",
+			"lien_02": "#",
+			"nom_03": "Charte d'utilisation",
+			"lien_03": "#",
+			"nom_04": "CGU-CGV",
+			"lien_04": "#",
+			"nom_05": "Mentions Légales",
+			"lien_05": "#",
+			"nom_06": "Politique de confidentialité",
+			"lien_06": "#"
+		},
+		"social_media": {
+			"lien_linkedin": "https://fr.linkedin.com/company/reel-it",
+			"lien_twitter": "https://twitter.com/reelit_groupe",
+			"lien_facebook": "https://www.facebook.com/reelitfr/"
+		}
+	},
+	"BUTTON": {
+		"envoyer": "ENVOYER",
+		"connexion": "CONNEXION",
+		"inscription": "INSCRIPTION",
+		"valider": "VALIDER",
+		"suivant": "SUIVANT",
+		"precedent": "PRÉCÉDENT",
+		"mettre_a_jour": "METTRE À JOUR",
+		"confirmer": "CONFIRMER",
+		"annuler": "ANNULER",
+		"inviter": "INVITER",
+		"enregistrer": "ENREGISTRER",
+		"voir_plus": "voir plus",
+		"rechercher": "RECHERCHER",
+		"reset_filter": "Réinitialiser les filtres", 
+    "mot_passe_oublie" : "J'ai oublié mon mot de passe",
+    "deleguer" : "DELEGUER",
+    "creer_alerte" : "Créer une alerte",
+    "télécharger" : "TELECHARGER"
+	},
+	"TITRES": {
+		"inscription": "Inscription",
+		"connexion": "Connexion",
+		"mon_compte": "Mon compte", 
+		"deconnexion": "Déconnexion",
+		"accueil": "Accueil",
+		"confirmation": "Confirmation",
+		"notifications": "MES NOTIFICATIONS",
+		"alertes_specifiques": "MES ALERTES SPÉCIFIQUES",
+		"ressources_recurrents": "MES RESSOURCES RÉCURRENTES",
+		"ajouter_mission": "Ajouter une mission",
+		"ajouter_profil": "Ajouter un profil",
+		"modifier_mission": "Modifier une mission",
+		"modifier_profil": "Modifier un profil",
+		"copier_mission": "Dupliquer une mission",
+		"copier_profil": "Dupliquer un profil",
+		"infos_principales": "INFORMATIONS PRINCIPALES",
+		"infos_secondaires": "INFORMATIONS SECONDAIRES",
+		"alertes_missions": "Mon alerte pour trouver une mission",
+		"profils_missions": "Mon alerte pour trouver un profil"
+	},
+	"FORM_LABEL": {
+		"champs_obligatoires": "* Champs obligatoires.",
+		"etes_vous_sur": "Souhaitez-vous confirmer vos modifications ?",
+		"nom": "Nom *",
+		"prenom": "Prénom *",
+		"email": "Email *",
+		"mdp": "Mot de passe *",
+		"telephone": "Téléphone *",
+		"immat": "N° Siret *",
+		"nom_societe": "Nom de la société *",
+		"type": "Type de société *",
+		"type_esn": "ESN",
+		"type_freelance": "Freelance",
+		"type_client": "Client",
+		"presentation_societe": "Présentation de la société *",
+		"annee_creation": "Année de création",
+		"effectif_societe": "Effectif de la société",
+		"ca": "Dernier CA à l'année",
+		"ape": "Code APE",
+		"prestation": "Les prestations proposées",
+		"activite": "Les activités",
+		"specialite": "Les spécialités techniques",
+		"intervention": "Les secteurs d'intervention",
+		"missions": {
+			"nom_client": "Nom Client *",
+			"debut_mission": "Début de mission *",
+			"duree": "Durée de mission estimée",
+			"metier": "Métiers *",
+			"tjm": "TJM journalier",
+			"localisation": "Localisation *",
+			"etudes": "Niveau d'étude requis *",
+			"experience": "Expérience requise *",
+			"langues": "Langues parlées",
+			"languages_informatique": "Langages informatiques",
+			"cms": "Framework / CMS",
+			"bdd": "BDD",
+			"methodes": "Méthodes",
+			"outils": "Outils",
+			"description": "Description de la mission",
+			"description_profil": "Description de le profil"
+		},
+		"duree": {
+			"inf1": "< à 1 mois",
+			"2": "2 mois",
+			"3": "3 mois",
+			"4": "4 mois",
+			"5": "5 mois",
+			"6": "6 mois",
+			"7": "7 mois",
+			"8": "8 mois",
+			"9": "9mois",
+			"10": "10 mois",
+			"11": "11 mois",
+			"12": "> à 12 mois"
+		},
+    "pdf": "Sélectionner un fichier"
+	},
+	"FORM_PLACEHOLDER": {
+		"nom": "Saisissez votre nom",
+		"prenom": "Saisissez votre prénom",
+		"email": "Saisissez un email",
+		"mdp": "Saisissez votre mot de passe",
+		"telephone": "Saisissez votre téléphone",
+		"immat": "Ajouter votre N° de siret",
+		"nom_societe": "Ajouter votre nom de société",
+		"type": "Choisir votre type de société",
+		"description": "Ajouter votre description",
+		"effectif_societe": "Ajouter votre effectif",
+		"ca": "Ajouter votre chiffre d'affaire",
+		"ape": "Saisissez votre code APE",
+		"collaborateur": "Saisissez un collaborateur",
+		"language_informatique": "Saisissez un langage informatique",
+		"cms": "Saisissez un Framework, CMS, ...",
+		"bdd": "Saisissez une BDD",
+		"experience": "Nombre d'années d'expériences",
+		"0_2": "0 à 2 ans",
+		"3_5": "3 à 5 ans",
+		"5_9": "5 à 9 ans",
+		"10+": "+ de 10 ans",
+		"missions": {
+			"nom_client": "Saisissez un Nom",
+			"debut_mission": "Début de mission *",
+			"duree": "Choisissez un niveau",
+			"metier": "Saisissez un métier",
+			"tjm": "Choisissez un prix journalier",
+			"localisation": "Saisissez une localisation",
+			"etudes": "Choisissez un niveau",
+			"experience": "Nombre d'années d'expériences",
+			"langues": "Saisissez une langue",
+			"languages_informatique": "Saisissez un langage",
+			"cms": "Saisissez un environnement",
+			"bdd": "Saisissez une BDD",
+			"methodes": "Saisissez une compétence",
+			"outils": "Saisissez un logiciel"
+		},
+		"recherche": "Recherchez"
+	},
+	"TOOLTIP": {
+		"email": "Au minimum : <br />8 caractères <br />1 minuscule <br />1 majuscule <br />1 chiffre <br />1 caractère spécial <br />",
+		"immat": "Saisissez votre immatriculation pour trouver votre entreprise"
+	},
+  "EMPTY" : {
+    "no_mission" : "Aucune misison",
+    "no_profil" : "Aucun profil",
+    "no_mission_delegue" : "Aucune misison à déléguer",
+    "no_profil_delegue" : "Aucun profil à déléguer"
+  },
+	"PAGE_MDP_OUBLIE": {
+		"titre": "Réinitialisation du mot de passe",
+		"placeholder": "Saisir votre nouveau mot de passe"
+	},
+	"404": {
+		"redirect": "Retour à la page d'acceuil"
+	},
+	"CODE_ERREUR": {
+		"code_100": "Le champ email est vide",
+		"code_101": "L'utilisateur existe déjà",
+		"code_102": "Le mot de passe n'est pas valide",
+		"code_103": "L'email n'est pas valide",
+		"code_104": "Le champ mot de passe est vide",
+		"code_105": "Le champ société est vide",
+		"code_106": "Le champ immatriculation est vide",
+		"code_107": "Le champ prénom est vide",
+		"code_108": "Le champ nom est vide",
+		"code_109": "Id manquant",
+		"code_110": "Parametre principal manquant",
+		"code_111": "Parametre type manquant",
+		"code_112": "Parametre search manquant",
+		"code_113": "Parametre email manquant",
+		"code_401": "Token expiré",
+		"code_408": "Accès refusé",
+		"code_default": "Erreur défaut",
+		"code_erreur_regex_email": "Le nom de domaine de l'e-mail n'est pas autorisé",
+		"code_erreur_regex_telephone": "Le numéro de téléphone n'est pas valide",
+		"code_erreur_regex_mdp": "Le mot de passe n'est pas valide",
+		"champ_obligatoire": "Il manque un champ obligatoire"
+	},
+  "copyright": "Reel IT copyright 2022"
+}
+
