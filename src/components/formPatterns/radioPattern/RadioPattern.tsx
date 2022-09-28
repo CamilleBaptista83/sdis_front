@@ -13,13 +13,6 @@ interface IRadioPatternProps {
 	datas: Array<string>;
 }
 
-const defaultProps: IRadioPatternProps = {
-	defaultChecked: "",
-	disabled: false,
-	label: "",
-	labelPlacement: "end",
-	datas: [],
-};
 
 const RadioPattern: React.FC<IRadioPatternProps> = (props) => {
 	return (
@@ -32,8 +25,9 @@ const RadioPattern: React.FC<IRadioPatternProps> = (props) => {
 				defaultValue={props.defaultChecked}
 				name="radio-buttons-group"
 			>
-				{props.datas.map((data) => (
+				{props.datas.map((data, index) => (
 					<FormControlLabel
+						key={index}
 						value={data}
 						control={<Radio />}
 						label={data.charAt(0).toUpperCase() + data.slice(1)}
@@ -46,6 +40,5 @@ const RadioPattern: React.FC<IRadioPatternProps> = (props) => {
 	);
 };
 
-RadioPattern.defaultProps = defaultProps;
 
 export default RadioPattern;

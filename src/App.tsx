@@ -4,33 +4,29 @@ import "./App.css";
 import { useTranslation } from "react-i18next";
 import "./services/traduction/i18n";
 import RadioPattern from "./components/formPatterns/radioPattern/RadioPattern";
+import CheckboxPattern from "./components/formPatterns/checkboxPattern/CheckboxPattern";
 
 function App() {
 	const { t } = useTranslation();
 	return (
 		<div className="App">
-			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
-				<p>
-					Edit <code>src/App.tsx</code> and save to reload.
-				</p>
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					{t("TITRES.confirmation")}
-					Learn React
-				</a>
-
-				<RadioPattern
-					label="test"
-					datas={["test", "tata", "toto"]}
-					defaultChecked="tata"
-				/>
-			</header>
-		</div>
+			<div style={{ display: "flex", justifyContent: "center", height: "100vh", alignItems: "center", gap: "30px" }}>
+				<div>
+					<p>Boutons Radio</p>
+					<RadioPattern
+						label=""
+						datas={["test", "tata", "toto"]}
+						defaultChecked="tata"
+					/>
+				</div>
+				<br />
+				<div>
+					<p>Boutons Checkbox</p>
+					<CheckboxPattern label="test" />
+					<CheckboxPattern label="test2" />
+				</div>
+			</div>
+		</div >
 	);
 }
 

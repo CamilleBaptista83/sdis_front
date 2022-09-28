@@ -10,30 +10,37 @@ interface ICheckboxPatternProps {
 	labelPlacement?: "start" | "top" | "end" | "bottom";
 }
 
-const defaultProps: ICheckboxPatternProps = {
-	checked: false,
-	disabled: false,
-	label: "",
-	labelPlacement: "end",
-};
 
-const CheckboxPattern: React.FC<ICheckboxPatternProps> = (props) => {
+
+const CheckboxPattern: React.FC<ICheckboxPatternProps> = ({ label, checked, disabled, labelPlacement }) => {
+
+	const [check, setCheck] = React.useState<boolean | undefined>(false);
+
+
+	// React.useEffect(() => {
+	// 	//APPEL AU WEB SERVICE OU JSON
+	// 	console.log(check)
+	// }, [check])
+
 	return (
 		<FormGroup>
 			<FormControlLabel
 				control={
 					<Checkbox
-						checked={props.checked}
-						disabled={props.disabled}
+						checked={check}
+						disabled={disabled}
+						onChange={(e) => {
+							setCheck(!check)
+							console.log(check)
+							console.log(e.target)
+						}}
 					/>
 				}
-				label={props.label}
-				labelPlacement={props.labelPlacement}
+				label={label}
+				labelPlacement={labelPlacement}
 			/>
 		</FormGroup>
 	);
 };
-
-CheckboxPattern.defaultProps = defaultProps;
 
 export default CheckboxPattern;
