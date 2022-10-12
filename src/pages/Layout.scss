@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
-    background-color: $bleu_reelIT;
+    background-color: $bleu_comNetwork;
     .nav-layout {
     background-color: white;
     ul {
@@ -19,7 +19,8 @@
         li {
             display: flex;
             align-items: center;
-            color: $bleu_reelIT;
+            color: $bleu_comNetwork;
+            text-transform: uppercase;
             a {
             text-decoration: none;
             font-weight: bold;
@@ -42,7 +43,7 @@ footer {
     display:flex;
     justify-content: center;
     background: white;
-    color: $bleu_reelIT;
+    color: $bleu_comNetwork;
     font-weight: bold;
 }
 }

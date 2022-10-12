@@ -2,7 +2,7 @@ import React from "react";
 import { Outlet, Link } from "react-router-dom";
 import "./Layout.scss";
 import { useSelector } from "react-redux";
-import Logo from '../style/img/logo-reel-it.png'
+import Logo from '../style/img/logo_com_network.png'
 const Layout = () => {
 
     const isLogged = useSelector((state: any) => state.logged);
@@ -14,7 +14,7 @@ const Layout = () => {
             <nav className="nav-layout">
                 {isLogged ? (<ul>
                     <li>
-                        <Link to="/"><img src={Logo} width="100px" />
+                        <Link to="/"><img src={Logo} width={100} />
                         </Link>
                     </li>
                     <li>
@@ -23,11 +23,11 @@ const Layout = () => {
                     <li>
                         <Link to="/contact">Contact</Link>
                     </li>
-                </ul>) : <ul><img src={Logo} /></ul>}
+                </ul>) : <ul><img src={Logo} width={100} /></ul>}
             </nav>
             <Outlet />
             <footer >
-                <p>Application RH</p>
+                <p>Application SDIS 13</p>
             </footer>
         </div>
     )
