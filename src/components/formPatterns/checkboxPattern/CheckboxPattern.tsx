@@ -31,9 +31,8 @@ const CheckboxPattern: React.FC<ICheckboxPatternProps> = ({ label, checked, disa
 						disabled={disabled}
 						onChange={(e) => {
 							setCheck(!check)
-							console.log(check)
-							console.log(e.target)
 						}}
+						className="item"
 					/>
 				}
 				label={label}

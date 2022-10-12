@@ -5,38 +5,39 @@ import Radio from "@mui/material/Radio/Radio";
 import RadioGroup from "@mui/material/RadioGroup/RadioGroup";
 import React from "react";
 
+import { Controller } from "react-hook-form";
+
 interface IRadioPatternProps {
 	label: string;
 	defaultChecked?: string;
+	control: any;
+	name: string;
 	disabled?: boolean;
-	labelPlacement?: "start" | "top" | "end" | "bottom";
-	datas: Array<string>;
+	labelPlacement?: string;
+	radioButtonsData: string[];
+	row?: boolean;
 }
 
 
-const RadioPattern: React.FC<IRadioPatternProps> = (props) => {
+
+const RadioPattern: React.FC<IRadioPatternProps> = ({ name, label, control, radioButtonsData, labelPlacement, disabled, row }) => {
 	return (
-		<FormControl>
-			<FormLabel id="demo-radio-buttons-group-label">
-				{props.label}
-			</FormLabel>
-			<RadioGroup
-				aria-labelledby="demo-radio-buttons-group-label"
-				defaultValue={props.defaultChecked}
-				name="radio-buttons-group"
-			>
-				{props.datas.map((data, index) => (
-					<FormControlLabel
-						key={index}
-						value={data}
-						control={<Radio />}
-						label={data.charAt(0).toUpperCase() + data.slice(1)}
-						labelPlacement={props.labelPlacement}
-						disabled={props.disabled}
-					/>
-				))}
-			</RadioGroup>
-		</FormControl>
+		<Controller control={control} name={name}
+			render={({ field }) => (
+				<RadioGroup {...field} row={row}>
+					{label}
+					{radioButtonsData.map((data, index) => (
+						<FormControlLabel
+							key={index}
+							labelPlacement={labelPlacement}
+							value={data}
+							control={<Radio />}
+							label={data}
+						/>
+					))}
+				</RadioGroup>
+			)}
+		/>
 	);
 };
 

@@ -3,30 +3,29 @@ import logo from "./logo.svg";
 import "./App.css";
 import { useTranslation } from "react-i18next";
 import "./services/traduction/i18n";
-import RadioPattern from "./components/formPatterns/radioPattern/RadioPattern";
-import CheckboxPattern from "./components/formPatterns/checkboxPattern/CheckboxPattern";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import { Layout, Home, Contact, NoPage, FormList } from './pages'
+import PersonalityInterview from "./pages/forms/PersonalityInterview";
+import FilledContractCandidateForm from "./pages/forms/FilledContractCandidateForm";
+import FeedbackOnClientItw from "./pages/forms/FeedbackOnClitItw";
 
 function App() {
-	const { t } = useTranslation();
 	return (
-		<div className="App">
-			<div style={{ display: "flex", justifyContent: "center", height: "100vh", alignItems: "center", gap: "30px" }}>
-				<div>
-					<p>Boutons Radio</p>
-					<RadioPattern
-						label=""
-						datas={["test", "tata", "toto"]}
-						defaultChecked="tata"
-					/>
-				</div>
-				<br />
-				<div>
-					<p>Boutons Checkbox</p>
-					<CheckboxPattern label="test" />
-					<CheckboxPattern label="test2" />
-				</div>
-			</div>
-		</div >
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={<Layout />}>
+					<Route index element={<Home />} />
+					<Route path="/formulaires" element={<FormList />} />
+					<Route path="/formulaires/candidat-entretien-personnalité" element={<PersonalityInterview />} />
+					<Route path="/formulaires/candidat-signature-contrat" element={<FilledContractCandidateForm />} />
+					<Route path="/formulaires/retour-entretien-client" element={<FeedbackOnClientItw />} />
+					<Route path="/contact" element={<Contact />} />
+					{/* <Route path="*" element={<NoPage />} /> */}
+				</Route>
+			</Routes>
+		</BrowserRouter>
 	);
 }
 
