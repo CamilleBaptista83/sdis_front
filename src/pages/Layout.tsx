@@ -18,7 +18,7 @@ const Layout = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/formulaires">Liste des formulaires</Link>
+                        <Link to="/admin-sdis">Administration des rendez-vous</Link>
                     </li>
                     <li>
                         <Link to="/contact">Contact</Link>
