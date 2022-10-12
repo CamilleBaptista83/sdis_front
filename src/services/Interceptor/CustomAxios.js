@@ -1,6 +1,6 @@
 import axios from "axios";
-import { store } from "../../state/store";
-
+import { store } from "../../redux/store";
+import { routesApi } from '../RoutesApi'
 let baseUrl = process.env.REACT_APP_URL_BACK;
 let frontUrl = process.env.REACT_APP_URL_FRONT;
 
@@ -8,6 +8,7 @@ const CustomAxios = axios.create({});
 
 CustomAxios.interceptors.request.use(
 	(request) => {
+
 		let token = localStorage.getItem("accessToken");
 		request.headers = {
 			Authorization: `Bearer ${token}`,

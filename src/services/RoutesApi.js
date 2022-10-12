@@ -1,4 +1,5 @@
-const routesApi = {
+export const routesApi = {
 	GET_REFRESH: "url",
-	USER: "url",
+	USERS: "user",
+	LOGIN: "user/login"
 };

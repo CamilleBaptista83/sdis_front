@@ -1,12 +1,12 @@
 import { TYPES } from "../actions/actionTypes";
 import { IUser, UserAction, UserState } from "../Interfaces/typeUser";
 
-const initialState : UserState = {
-  user : [
+const initialState: UserState = {
+  user: [
     {
-      id:1,
-      email : "test@test.fr",
-      password : "12345"
+      id: 1,
+      email: "test@test.fr",
+      password: "12345"
     }
   ]
 }
@@ -18,7 +18,6 @@ const userReducer = (
   switch (action.type) {
     case TYPES.USER.ADD:
       const newUser: IUser = {
-        id: Math.random(), // not really unique
         email: action.user.email,
         password: action.user.password,
       }
@@ -34,6 +33,8 @@ const userReducer = (
         ...state,
         user: removeUser,
       }
+    case TYPES.USER.GET:
+      return { user: state.user }
   }
   return state
 }
