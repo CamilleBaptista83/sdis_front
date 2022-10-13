@@ -26,10 +26,9 @@ const RadioPattern: React.FC<IRadioPatternProps> = ({ name, label, control, radi
 			render={({ field }) => (
 				<RadioGroup {...field} row={row}>
 					{label}
-					{radioButtonsData.map((data, index) => (
+					{radioButtonsData.map((data, index: Number) => (
 						<FormControlLabel
-							key={index}
-							labelPlacement={labelPlacement}
+							labelPlacement={"start"}
 							value={data}
 							control={<Radio />}
 							label={data}

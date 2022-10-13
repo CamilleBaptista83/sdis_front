@@ -36,7 +36,7 @@ const CheckboxPattern: React.FC<ICheckboxPatternProps> = ({ label, checked, disa
 					/>
 				}
 				label={label}
-				labelPlacement={labelPlacement}
+				labelPlacement={"start"}
 			/>
 		</FormGroup>
 	);
