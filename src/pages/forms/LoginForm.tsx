@@ -7,6 +7,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { loggedActions } from "../../redux/actions/loggedActions";
 
 import { bindActionCreators } from "redux";
+import Lottie, { LottiePlayer } from "lottie-react";
+import loadingAnimation from '../../style/img/98742-loading.json'
+
 
 
 interface MyForm {
@@ -41,9 +44,11 @@ const defaultValues = {
 
 
 
-const LoginForm = () => {
+
+const LoginForm = ({ isLoading, setIsLoading }: any) => {
     const dispatch = useDispatch();
     const { getLogged } = bindActionCreators(loggedActions, dispatch);
+    const isLogged = useSelector((state: any) => state.logged);
 
     const {
         control,
@@ -58,8 +63,6 @@ const LoginForm = () => {
     //  const methods = useForm<IFormInput>({ defaultValues: defaultValues });
     // const { handleSubmit, reset, control, setValue, watch, formState: { errors } } = methods;
 
-
-
     // effect runs when user state is updated
     useEffect(() => {
         // reset form with user data
@@ -67,13 +70,23 @@ const LoginForm = () => {
     }, [defaultValues]);
 
 
+    useEffect(() => {
+        console.log(isLogged)
+
+        if (isLogged === true) {
+            setIsLoading(false)
+        }
+    }, [isLogged])
+
     const onSubmit = (data: MyForm) => {
         console.log(data)
         getLogged(data);
+        setIsLoading(true)
     };
 
 
-    return (
+
+    return isLoading ? <p><Lottie animationData={loadingAnimation} /></p> : (
         <form onSubmit={handleSubmit(onSubmit)} style={{ padding: "40px", backgroundColor: "white", borderRadius: "5px" }}>
             <FormControl fullWidth>
                 {/* <Controller name={'firstName'} control={control} render={({ field: { onChange, value } }) => <TextField required onChange={onChange} value={value} label={'Prénom'} variant="outlined" className="item" error={!!errors.firstName}

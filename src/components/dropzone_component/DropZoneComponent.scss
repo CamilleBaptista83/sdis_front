@@ -1,0 +1,48 @@
+.dropzone-component-container {
+    width: 100%;
+    
+    .dropzone-tool-container {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    background: lightgrey;
+    padding: 20px 30px;
+    margin: 0 200px;
+    border-radius: 10px;
+    .drag-drop-zone {
+        border: dashed white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        .title-drag-drop {
+            font-weight: bold;
+            color: #f39200;
+        }
+        .description-drag-drop {
+            font-style: italic;
+        }
+    }
+    .drag-drop-submit-container {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    .drag-drop-file-element {
+        display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+    }
+    }
+}
+}

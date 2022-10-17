@@ -6,8 +6,8 @@ import Logo from '../style/img/logo_com_network.png'
 const Layout = () => {
 
     const isLogged = useSelector((state: any) => state.logged);
-    const user = useSelector((state: any) => state.user.user[0]);
-    console.log(user)
+    // const user = useSelector((state: any) => state.user.user[0]);
+    // console.log(user)
 
     return (
         <div className="layout">

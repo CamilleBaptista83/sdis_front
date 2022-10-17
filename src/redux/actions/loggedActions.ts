@@ -20,10 +20,10 @@ const getLogged = (data: any, navigate?: any) => {
             type: "getLogged",
             payload: true,
           });
-          localStorage.setItem("accessToken", response.data.token);
+          localStorage.setItem("accessToken", response.data.access_token);
           localStorage.setItem(
             "refreshToken",
-            response.data.refreshToken
+            response.data.refresh_Token
           );
 
           console.log(response.data)
