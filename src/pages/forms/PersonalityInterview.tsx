@@ -2,7 +2,7 @@ import React from 'react'
 import { FormProvider, useForm } from "react-hook-form";
 import { Button } from '@mui/material';
 import TextfieldPattern from '../../components/formPatterns/textfieldPattern/TextfieldPattern';
-import DatePickerPattern from '../../components/formPatterns/datePickerPattern/datePickerPattern';
+import DatePickerPattern from '../../components/formPatterns/datePickerPattern/DatePickerPattern';
 import AutoCompletePattern from '../../components/formPatterns/autocompletePattern/AutoCompletePattern';
 import AutoCompleteMultiplePattern from '../../components/formPatterns/autoCompleteMultiplePattern/AutoCompleteMultiplePattern';
 import RadioPattern from '../../components/formPatterns/radioPattern/RadioPattern'
@@ -16,7 +16,7 @@ interface IFormInput {
     poste: string;
     date: Date;
     interviewFormat: string;
-    responsables: any;
+    content: any;
     interviewSummary: string,
     rating: string
 }
@@ -26,7 +26,7 @@ const defaultValues = {
     nom: "",
     poste: "",
     date: new Date(),
-    responsables: [],
+    content: [""],
     interviewFormat: "",
     technicalTest: "",
     interviewSummary: "",
@@ -50,11 +50,11 @@ const PersonalityInterview = () => {
                         </div>
                         <div className='form-row'>
                             <TextfieldPattern name={"nom"} control={control} label={"Nom"} required={true} />
-                            <AutoCompletePattern name={"poste"} control={control} label={"Poste recherché"} required={true} jobs={jobs} />
+                            <AutoCompletePattern name={"poste"} control={control} label={"Poste recherché"} required={true} content={jobs} />
                         </div>
                     </div>
                     <div className='form-row'>
-                        <AutoCompleteMultiplePattern name={"responsables"} control={control} label={"Responsable(s) rencontré(s)"} responsablesSelection={responsablesSelection} placeholder={'responsable'} />
+                        <AutoCompleteMultiplePattern name={"responsables"} control={control} label={"Responsable(s) rencontré(s)"} content={responsablesSelection} placeholder={'responsable'} />
                     </div>
                     <div className='form-group'>
                         <RadioPattern control={control} name={"interviewFormat"} label={"Entretien Physique"} radioButtonsData={toggleRadioButtonsYesOrNo} labelPlacement={"end"} row={true} />

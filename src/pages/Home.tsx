@@ -7,6 +7,10 @@ import PersonalityInterview from "./forms/PersonalityInterview";
 import CardActionPattern from '../components/formPatterns/cardActionPattern/CardActionPattern'
 import { useSelector } from "react-redux";
 
+
+import FileImportCardIllustration from '../style/img/importing-csv-file-illustrationl.jpg'
+import AppointmentCreationCardIllustration from '../style/img/appointment-creation-form.jpg'
+
 import "./Home.scss"
 
 const Home = () => {
@@ -32,8 +36,10 @@ const Home = () => {
                 </>) :
                 (<>
                     <h1>Dashboard</h1>
-                    <CardActionPattern title="Ajouter des nouveaux utilisateurs" text="Importation d'une liste de contact via un fichier CSV" link="/admin-sdis/import-fichier" />
-                    {/* <Button variant="contained" endIcon={<SendIcon />} >Envoyer le lien d'inscription</Button> */}
+                    <div style={{ display: "flex", justifyContent: "center", gap: "40px" }}>
+                        <CardActionPattern title="Ajouter une nouvelle commande" text="Importation d'une liste via un fichier CSV" link="/admin/import-fichier" image={FileImportCardIllustration} />
+                        <CardActionPattern title="Créer de nouveaux créneaux de prise de rendez-vous" text="Formulaire à saisir" link="/admin/creation-rdv" image={AppointmentCreationCardIllustration} />
+                    </div>
                 </>)}
 
         </div >

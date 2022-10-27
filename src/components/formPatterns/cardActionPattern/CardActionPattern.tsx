@@ -5,7 +5,6 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
-import image from '../../../style/img/importing-csv-file-illustrationl.jpg'
 import { string } from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 
@@ -13,10 +12,11 @@ interface ICard {
     title: string,
     text: string,
     link: string,
+    image: string
 
 }
 
-const CardActionPattern = ({ title, text, link }: ICard) => {
+const CardActionPattern = ({ title, text, link, image }: ICard) => {
 
     const navigate = useNavigate();
 

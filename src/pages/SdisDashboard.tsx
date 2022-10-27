@@ -16,9 +16,9 @@ const SdisDashboard = () => {
 
     return isLogged && (
         <div className='page-container'>
-            <nav>
-                <Button variant="contained" onClick={() => navigate("/admin-sdis/import-fichier")}>Import par fichier</Button>
-                <Button variant="contained" onClick={() => navigate("/admin-sdis/import-formulaire")}>Import par formulaire</Button>
+            <nav style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
+                <Button variant="contained" onClick={() => navigate("/admin/import-fichier")}>Import d'un fichier d'utilisateurs</Button>
+                <Button variant="contained" onClick={() => navigate("/admin/creation-rdv")}>Création d'un planning de planning de rendez-vous</Button>
             </nav>
             <div className='submenu-content'>
                 <Outlet />

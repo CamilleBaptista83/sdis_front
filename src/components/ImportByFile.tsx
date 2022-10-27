@@ -6,7 +6,7 @@ import DragDropFilePattern from './formPatterns/dragDropFilePattern/DragDropFile
 const ImportByFile = () => {
     return (
         <div className='box'>
-            <h2 className='header'>Import des utilisateurs</h2>
+            <h2 className='header' style={{ color: "white" }}>Import des utilisateurs</h2>
             {/* <DragDropFilePattern /> */}
             {/* <div style={{ background: "red", height: "5px", width: '100%' }}></div> */}
             <DropZoneComponent />

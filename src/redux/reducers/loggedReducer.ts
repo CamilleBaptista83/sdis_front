@@ -1,7 +1,6 @@
 import { TYPES } from "../actions/actionTypes";
 import { IUser, UserAction, UserState } from "../Interfaces/typeUser";
 
-
 let initialState: boolean = false
 
 const loggedReducer = (state = initialState, action: any) => {

@@ -6,12 +6,17 @@ import { Checkbox, Input, TextField, Autocomplete, Select, MenuItem, InputLabel,
 interface AutocompleteProps {
     name: string;
     control: any;
+    placeholder?: string;
     label: string;
     required?: boolean;
-    jobs: string[];
+    jobs?: string[];
+    content: string[];
+    optionsSelected?: any;
+    setOptionsSelected?: any;
+
 }
 
-const AutoCompletePattern = ({ name, control, label, required, jobs }: AutocompleteProps) => {
+const AutoCompletePattern = ({ name, control, label, required, jobs, content, optionsSelected, setOptionsSelected, placeholder }: AutocompleteProps) => {
     return (
         <Controller
             name={name}
@@ -19,10 +24,12 @@ const AutoCompletePattern = ({ name, control, label, required, jobs }: Autocompl
             render={({ field: { value, onChange } }) => (
                 <Autocomplete
                     className="item"
+                    placeholder={placeholder}
                     onChange={(event, item) => {
                         onChange(item);
+                        setOptionsSelected(item)
                     }}
-                    options={jobs}
+                    options={content}
                     isOptionEqualToValue={(option, value) => {
                         return option === value;
                     }}

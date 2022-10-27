@@ -23,7 +23,7 @@ const getLogged = (data: any, navigate?: any) => {
           localStorage.setItem("accessToken", response.data.access_token);
           localStorage.setItem(
             "refreshToken",
-            response.data.refresh_Token
+            response.data.refresh_token
           );
 
           console.log(response.data)

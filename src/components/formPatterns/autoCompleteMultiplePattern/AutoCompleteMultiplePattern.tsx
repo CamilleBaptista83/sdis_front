@@ -8,11 +8,17 @@ interface AutocompleteMultipleProps {
     control: any;
     label?: string;
     required?: boolean;
-    responsablesSelection: string[];
+    content?: any;
     placeholder: string;
+    optionsSelected?: any;
+    setOptionsSelected?: any;
+    disabled?: boolean;
+    // commandesSelected?: any;
 }
 
-const AutoCompleteMultiplePattern = ({ name, control, label, required, responsablesSelection, placeholder }: AutocompleteMultipleProps) => {
+const AutoCompleteMultiplePattern = ({ name, control, label, required, content, placeholder, optionsSelected, disabled, setOptionsSelected }: AutocompleteMultipleProps) => {
+
+
     return (
         <Controller
             name={name}
@@ -22,29 +28,34 @@ const AutoCompleteMultiplePattern = ({ name, control, label, required, responsab
                     style={{ margin: "0" }}
                     sx={{ margin: 0 }}
                     multiple
-                    value={value}
+                    defaultValue={[]}
+                    value={value || [null]}
+                    disabled={disabled}
                     onChange={(event: any, newValue: any | null) => {
+                        // optionsSelected.current = newValue
+                        setOptionsSelected(newValue)
+                        console.log(newValue)
                         onChange(newValue.map((option: any | null) => option.value || option));
                     }}
                     className="item"
-                    options={responsablesSelection}
+                    options={content?.length > 0 ? content?.map((el: any) => el) : ['']}
                     renderInput={(params) => {
                         return (
                             <TextField
                                 {...params}
                                 sx={{ margin: 0 }}
-
                                 label={label}
                                 placeholder={placeholder}
                                 margin="normal"
                                 variant="standard"
-                                required={value.length === 0}
+                                required={value?.length === 0}
                                 style={{ margin: "0" }}
                             />
                         );
                     }}
                 />
-            )}
+            )
+            }
         />
     )
 }

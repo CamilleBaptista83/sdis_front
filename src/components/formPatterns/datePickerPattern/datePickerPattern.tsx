@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Controller } from "react-hook-form";
 import { TextField } from '@mui/material';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
@@ -13,13 +13,20 @@ interface DatePickerProps {
     control: any;
     label?: string;
     required?: boolean;
+    optionsSelected?: any;
+    setOptionsSelected?: any;
+    disableFuture?: boolean;
+    disablePast?: boolean
+    minDate?: any
+    maxDate?: any
 }
 
 
-const DatePickerPattern = ({ name, control, label, required }: DatePickerProps) => {
+const DatePickerPattern = ({ name, control, label, required, optionsSelected, setOptionsSelected, disableFuture, disablePast, minDate, maxDate }: DatePickerProps) => {
+
     return (
         <Controller
-            name="date"
+            name={name}
             control={control}
             render={({
                 field: { onChange, value }
@@ -28,10 +35,16 @@ const DatePickerPattern = ({ name, control, label, required }: DatePickerProps) 
                 >
                     <DatePicker
                         className="item"
-                        label="Date de démarrage de la mission"
-                        disableFuture
-                        value={value.toString()}
-                        onChange={onChange}
+                        label={label}
+                        disablePast={disablePast}
+                        disableFuture={disableFuture}
+                        value={value}
+                        minDate={minDate}
+                        maxDate={maxDate}
+                        onChange={(newValue) => {
+                            onChange(newValue);
+                            setOptionsSelected(newValue)
+                        }}
                         renderInput={(params) => (
                             (
                                 <TextField
