@@ -43,7 +43,7 @@ const DatePickerPattern = ({ name, control, label, required, optionsSelected, se
                         maxDate={maxDate}
                         onChange={(newValue) => {
                             onChange(newValue);
-                            setOptionsSelected(newValue)
+                            setOptionsSelected(new Date(newValue.$d))
                         }}
                         renderInput={(params) => (
                             (
